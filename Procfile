@@ -1,1 +1,1 @@
-web: gunicorn filtering-forum.wsgi --log-file -
+web:gunicorn filtering-forum.wsgi --log-file -
