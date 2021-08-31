@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load profanity %}
+
+<h1 style="text-align:center; margin-block:50px; color:red;">Hey {{user}}, Write something to create your post</h1>
+
+<form method="POST" style="margin-left:150px;">
+    {% csrf_token %}    
+    {{form|crispy}}
+    <input type="submit" value="Make Post"  style="margin-block:50px;">
+</form>
+
+{% endblock content %}
